@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - GlobalSettings
+  - Base
+  - PathStart
+  - WaveSpawner
+  - PurplePortal
+  - Monster
+  - Tile
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1311527941
+    locked: 0
+  - name: Decorations
+    uniqueID: 2723462509
+    locked: 0
+  - name: Path
+    uniqueID: 1614211387
+    locked: 0
+  - name: Valid Tower Points
+    uniqueID: 1855442311
+    locked: 0
+  - name: Radius Check
+    uniqueID: 508332233
+    locked: 0
+  - name: Foreground
+    uniqueID: 1285077691
+    locked: 0
+  - name: Rank Graphics
+    uniqueID: 3577255241
+    locked: 0
+  - name: UI
+    uniqueID: 2144026449
+    locked: 0

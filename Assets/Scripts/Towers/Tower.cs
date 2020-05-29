@@ -86,7 +86,6 @@ public abstract class Tower : MonoBehaviour
     void Update()
     {
         Attack();
-        Debug.Log(Target);
     }
 
     public void Select()
@@ -124,13 +123,26 @@ public abstract class Tower : MonoBehaviour
         }
         else if (Target != null && !Target.Alive || Target != null && !Target.IsActive)
         {
-            
             monsters.Remove(Target);
             Target = null;
         }
-        if (Target == null && monsters.Count > 0 && monsters[0].IsActive)
+        if (Target == null && monsters.Count > 0)
         {
-            Target = monsters[0];
+            int i = 0;
+            int k = monsters.Count;
+            while (i < k)
+            {
+                if (!monsters[i].Alive && !monsters[i].IsActive)
+                {
+                    monsters.RemoveAt(i);
+                    k--;
+                }
+                i++;
+            }
+            if (monsters.Count > 0)
+            {
+                Target = monsters[0];
+            }
         }
         if (Target != null && Target.IsActive)
         {
@@ -142,8 +154,6 @@ public abstract class Tower : MonoBehaviour
             }
             
         }
-        
-
     }
     
     /// <summary>

@@ -22,7 +22,6 @@ public class SoundManager : Singleton<SoundManager>
     // Start is called before the first frame update
     void Start()
     {
-
         AudioClip[] clips = Resources.LoadAll<AudioClip>("Audio") as AudioClip[];
 
         foreach (AudioClip clip in clips)
@@ -39,7 +38,8 @@ public class SoundManager : Singleton<SoundManager>
     // Update is called once per frame
     void Update()
     {
-        
+
+
     }
 
     public void PlaySFX(string name)
@@ -61,7 +61,8 @@ public class SoundManager : Singleton<SoundManager>
     {
         sfxSource.volume = PlayerPrefs.GetFloat("SFX", 0.5f);
         musicSource.volume = PlayerPrefs.GetFloat("Music", 0.5f);
-
+        Debug.Log(PlayerPrefs.GetFloat("SFX", 0.5f) + " " + sfxSource.volume + " sfx");
+        Debug.Log(PlayerPrefs.GetFloat("Music", 0.5f) + " " + musicSource.volume + " music");
         musicSlider.value = musicSource.volume;
         sfxSlider.value = sfxSource.volume;
     }

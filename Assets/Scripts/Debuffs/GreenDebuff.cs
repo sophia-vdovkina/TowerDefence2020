@@ -22,7 +22,12 @@ public class GreenDebuff : Debuff
             {
                 applied = true;
 
-                target.Speed -= (target.MaxSpeed * slowingFactor) / 100;
+                if (target.Speed > (target.MaxSpeed * slowingFactor) / 100)
+                {
+                    target.Speed -= (target.MaxSpeed * slowingFactor) / 100;
+                }
+
+                
             }
         }
 

@@ -46,7 +46,6 @@ public class Monster : MonoBehaviour
         }
     }
 
-    
 
     private void Update()
     {
@@ -54,13 +53,14 @@ public class Monster : MonoBehaviour
         Move();
     }
 
+
     public void Spawn(int health)
     {
         myAnimator = GetComponent<Animator>();
 
         spriteRenderer = GetComponent<SpriteRenderer>();
 
-        MaxSpeed = speed;
+        MaxSpeed = Speed;
 
         this.health.Reset();
 
@@ -119,6 +119,10 @@ public class Monster : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            Debug.Log(GridPosition);
+        }
     }
 
     private void SetPath(Stack<Node> newPath)
@@ -161,6 +165,8 @@ public class Monster : MonoBehaviour
         GameManager.Instance.Pool.ReleaseObject(gameObject);
         // удаляем монстра из игры
         GameManager.Instance.RemoveMonster(this);
+
+        Speed = MaxSpeed;
     }
 
     public void TakeDamage(float damage, Element damageSource)

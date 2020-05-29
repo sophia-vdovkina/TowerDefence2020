@@ -337,7 +337,7 @@ public class GameManager : Singleton<GameManager>
             monster.Spawn(health);
             if(wave % 5 == 0)
             {
-                monsterHealth += 5;
+                monsterHealth += 2;
             }
 
             activeMonsters.Add(monster);

@@ -335,7 +335,7 @@ public class GameManager : Singleton<GameManager>
             // запрашивает монстра из пула
             Monster monster = Pool.GetObject(type).GetComponent<Monster>();
             monster.Spawn(health);
-            if(wave % 3 == 0)
+            if(wave % 5 == 0)
             {
                 monsterHealth += 5;
             }

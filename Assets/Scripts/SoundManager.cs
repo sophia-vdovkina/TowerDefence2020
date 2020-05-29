@@ -22,6 +22,7 @@ public class SoundManager : Singleton<SoundManager>
     // Start is called before the first frame update
     void Start()
     {
+
         AudioClip[] clips = Resources.LoadAll<AudioClip>("Audio") as AudioClip[];
 
         foreach (AudioClip clip in clips)

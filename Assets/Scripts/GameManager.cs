@@ -220,7 +220,7 @@ public class GameManager : Singleton<GameManager>
 
     public void UpgradeTower()
     {
-        if (selectedTower != null)
+        if (selectedTower != null && !WaveActive)
         {
             if (selectedTower.Level <= selectedTower.Upgrades.Length && Gold >= selectedTower.NextUpgrade.Price)
             {
@@ -348,7 +348,7 @@ public class GameManager : Singleton<GameManager>
 
     public void SellTower()
     {
-        if (selectedTower != null)
+        if (selectedTower != null && !WaveActive)
         {
             Gold += selectedTower.Price / 2;
 
@@ -457,6 +457,7 @@ public class GameManager : Singleton<GameManager>
 
     public void QuitGame()
     {
-        Application.Quit();
+        Time.timeScale = 1;
+        SceneManager.LoadScene(0);
     }
 }
